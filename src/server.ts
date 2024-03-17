@@ -3,7 +3,6 @@ import dotenv from "dotenv";
 import axios from "axios";
 
 dotenv.config();
-
 const app = express();
 const PORT = process.env.PORT || 2000;
 
@@ -36,6 +35,7 @@ app.post(
           },
         }
       );
+      console.log(response.data);
       res.json(response.data);
     } catch (error) {
       if (axios.isAxiosError(error)) {
