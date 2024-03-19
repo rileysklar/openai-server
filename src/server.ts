@@ -20,10 +20,6 @@ function helloWorld(req: Request, res: Response) {
   res.send("Hello, World!");
 }
 
-app.options("/api/openai", (req, res) => {
-  res.send("OK");
-});
-
 app.connect("/api/openai", (req, res) => {
   res.send("OK");
 });
